@@ -19,7 +19,8 @@ for f in allfiles:
 	first_row=True
 	with open (input_folder + f) as sourcefile:
 		lns = sourcefile.readlines()
-		lns[0] = lns[0].replace('Metaphlan2_Analysis-CPM',newname)
+		lns[0] = lns[0].replace('_Abundance-RELAB','')
+		#lns[0] = lns[0].replace('Metaphlan2_Analysis-RELAB',newname)
 	with open(input_folder + f,'w') as sourcefile:	
 		sourcefile.writelines(lns)
 
